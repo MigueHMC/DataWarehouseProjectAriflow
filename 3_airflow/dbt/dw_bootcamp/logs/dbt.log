@@ -1,0 +1,1861 @@
+[0m23:24:50.947533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273C88B23C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273C5626FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273C9C87C50>]}
+
+
+============================== 23:24:50.956513 | 411ac757-bdb0-4c40-b089-8972fdad2831 ==============================
+[0m23:24:50.956513 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:24:50.957282 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m23:24:51.024776 [info ] [MainThread]: dbt version: 1.11.11
+[0m23:24:51.025345 [info ] [MainThread]: python version: 3.13.5
+[0m23:24:51.025759 [info ] [MainThread]: python path: C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Scripts\python.exe
+[0m23:24:51.026223 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:24:51.247588 [info ] [MainThread]: Using profiles dir at C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp
+[0m23:24:51.248377 [info ] [MainThread]: Using profiles.yml file at C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\profiles.yml
+[0m23:24:51.248903 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\dbt_project.yml
+[0m23:24:51.250449 [info ] [MainThread]: adapter type: postgres
+[0m23:24:51.250872 [info ] [MainThread]: adapter version: 1.10.0
+[0m23:24:51.360557 [info ] [MainThread]: Configuration:
+[0m23:24:51.361174 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:24:51.361673 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:24:51.362086 [info ] [MainThread]: Required dependencies:
+[0m23:24:51.362525 [debug] [MainThread]: Executing "git --help"
+[0m23:24:51.407088 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:24:51.407641 [debug] [MainThread]: STDERR: "b''"
+[0m23:24:51.408015 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:24:51.408437 [info ] [MainThread]: Connection:
+[0m23:24:51.408943 [info ] [MainThread]:   host: localhost
+[0m23:24:51.409369 [info ] [MainThread]:   port: 5433
+[0m23:24:51.409781 [info ] [MainThread]:   user: postgres
+[0m23:24:51.410215 [info ] [MainThread]:   database: dbt_db
+[0m23:24:51.410556 [info ] [MainThread]:   schema: public
+[0m23:24:51.410932 [info ] [MainThread]:   connect_timeout: 10
+[0m23:24:51.411294 [info ] [MainThread]:   role: None
+[0m23:24:51.411668 [info ] [MainThread]:   search_path: None
+[0m23:24:51.412039 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:24:51.412412 [info ] [MainThread]:   sslmode: None
+[0m23:24:51.412751 [info ] [MainThread]:   sslcert: None
+[0m23:24:51.413231 [info ] [MainThread]:   sslkey: None
+[0m23:24:51.413688 [info ] [MainThread]:   sslrootcert: None
+[0m23:24:51.414228 [info ] [MainThread]:   application_name: dbt
+[0m23:24:51.414661 [info ] [MainThread]:   retries: 1
+[0m23:24:51.415459 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m23:24:51.924722 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:24:53.570466 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:24:53.570927 [debug] [MainThread]: On debug: select 1 as id
+[0m23:24:53.571267 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:24:53.621743 [debug] [MainThread]: SQL status: SELECT 1 in 0.050 seconds
+[0m23:24:53.622755 [debug] [MainThread]: On debug: Close
+[0m23:24:53.623156 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:24:53.623731 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:24:53.624720 [debug] [MainThread]: Command `dbt debug` succeeded at 23:24:53.624608 after 2.88 seconds
+[0m23:24:53.625013 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:24:53.625325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273C2FF2B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273CB0FC3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273CAD659D0>]}
+[0m23:24:53.625683 [debug] [MainThread]: Flushing usage events
+[0m23:24:54.479282 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:30.690724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000290194163C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029016136FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002901A7F3C50>]}
+
+
+============================== 23:27:30.696206 | d78d7468-4e47-45a7-9df2-b7559d4e81ef ==============================
+[0m23:27:30.696206 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:27:30.696998 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m23:27:31.020279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd78d7468-4e47-45a7-9df2-b7559d4e81ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029019B09810>]}
+[0m23:27:31.163391 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m23:27:31.164854 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m23:27:31.165770 [debug] [MainThread]: Command `dbt deps` succeeded at 23:27:31.165642 after 0.65 seconds
+[0m23:27:31.166102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002901A839480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002901A8399D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002901A68DE50>]}
+[0m23:27:31.166438 [debug] [MainThread]: Flushing usage events
+[0m23:27:32.028305 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:48.956460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36C0263C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A368D36FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36D403ED0>]}
+
+
+============================== 23:27:48.962055 | e88f4ea3-bb35-4fc2-95f0-827662adaf98 ==============================
+[0m23:27:48.962055 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:27:48.962610 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt deps', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m23:27:49.114034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e88f4ea3-bb35-4fc2-95f0-827662adaf98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36C70D940>]}
+[0m23:27:49.144449 [debug] [MainThread]: Set downloads directory='C:\Users\migue\AppData\Local\Temp\dbt-downloads-8qxxil0b'
+[0m23:27:49.145375 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m23:27:49.541842 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m23:27:49.543472 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m23:27:49.889746 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m23:27:49.898671 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m23:27:50.518846 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m23:27:50.523505 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m23:27:51.560372 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m23:27:51.577394 [info ] [MainThread]: Updating lock file in file path: C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp/package-lock.yml
+[0m23:27:51.589287 [debug] [MainThread]: Set downloads directory='C:\Users\migue\AppData\Local\Temp\dbt-downloads-tpt2u5pl'
+[0m23:27:51.598710 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m23:27:52.917390 [info ] [MainThread]: Installed from version 1.3.0
+[0m23:27:52.917989 [info ] [MainThread]: Updated version available: 1.3.3
+[0m23:27:52.918514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'e88f4ea3-bb35-4fc2-95f0-827662adaf98', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36E6686B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36E6689E0>]}
+[0m23:27:52.918897 [info ] [MainThread]: Installing metaplane/dbt_expectations
+[0m23:27:54.836879 [info ] [MainThread]: Installed from version 0.10.8
+[0m23:27:54.837457 [info ] [MainThread]: Updated version available: 0.10.10
+[0m23:27:54.837995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'e88f4ea3-bb35-4fc2-95f0-827662adaf98', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36E644950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36D277F20>]}
+[0m23:27:54.838387 [info ] [MainThread]: Installing godatadriven/dbt_date
+[0m23:27:55.489232 [info ] [MainThread]: Installed from version 0.19.0
+[0m23:27:55.489847 [info ] [MainThread]: Up to date!
+[0m23:27:55.490421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'e88f4ea3-bb35-4fc2-95f0-827662adaf98', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36E5EBD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36E5EB690>]}
+[0m23:27:55.490828 [info ] [MainThread]: 
+[0m23:27:55.491271 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils', 'metaplane/dbt_expectations']                 
+Update your versions in packages.yml, then run dbt deps
+[0m23:27:55.494839 [debug] [MainThread]: Command `dbt deps` succeeded at 23:27:55.494679 after 6.66 seconds
+[0m23:27:55.495294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36D269F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36E62DFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A36E641F40>]}
+[0m23:27:55.495739 [debug] [MainThread]: Flushing usage events
+[0m23:27:56.397844 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:30:35.970943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2572123C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C253F26FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2595F7C50>]}
+
+
+============================== 23:30:35.975663 | 3c57a268-bc34-43ba-bc48-c7ca759f5f84 ==============================
+[0m23:30:35.975663 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:30:35.976305 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m23:30:36.208601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2578E9940>]}
+[0m23:30:36.283535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2585E2580>]}
+[0m23:30:36.286201 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m23:30:36.768232 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m23:30:36.770229 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:30:36.770784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C259A70650>]}
+[0m23:30:40.736823 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dw_bootcamp.mart
+- models.dw_bootcamp.intermediate
+- models.dw_bootcamp.staging
+[0m23:30:40.743672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2585DFD40>]}
+[0m23:30:40.826491 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:30:40.843426 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:30:40.943882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C259DE9D30>]}
+[0m23:30:40.944433 [info ] [MainThread]: Found 1 seed, 899 macros
+[0m23:30:40.944815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C259CA6000>]}
+[0m23:30:40.946346 [info ] [MainThread]: 
+[0m23:30:40.946815 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:30:40.947227 [info ] [MainThread]: 
+[0m23:30:40.947758 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:30:40.948617 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db'
+[0m23:30:41.066355 [debug] [ThreadPool]: Using postgres connection "list_dbt_db"
+[0m23:30:41.066783 [debug] [ThreadPool]: On list_dbt_db: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:30:41.067561 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:30:41.088481 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.021 seconds
+[0m23:30:41.090647 [debug] [ThreadPool]: On list_dbt_db: Close
+[0m23:30:41.092107 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db_public'
+[0m23:30:41.097826 [debug] [ThreadPool]: Using postgres connection "list_dbt_db_public"
+[0m23:30:41.098155 [debug] [ThreadPool]: On list_dbt_db_public: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db_public"} */
+select
+      'dbt_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m23:30:41.098429 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:30:41.117312 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.019 seconds
+[0m23:30:41.118966 [debug] [ThreadPool]: On list_dbt_db_public: ROLLBACK
+[0m23:30:41.119751 [debug] [ThreadPool]: On list_dbt_db_public: Close
+[0m23:30:41.126066 [debug] [MainThread]: Using postgres connection "master"
+[0m23:30:41.126545 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:30:41.126900 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:30:41.170326 [debug] [MainThread]: SQL status: SELECT 0 in 0.043 seconds
+[0m23:30:41.171538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C259E91A90>]}
+[0m23:30:41.171969 [debug] [MainThread]: On master: ROLLBACK
+[0m23:30:41.172724 [debug] [MainThread]: On master: COMMIT
+[0m23:30:41.173003 [debug] [MainThread]: Using postgres connection "master"
+[0m23:30:41.173259 [debug] [MainThread]: On master: COMMIT
+[0m23:30:41.174679 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:30:41.174966 [debug] [MainThread]: On master: Close
+[0m23:30:41.180730 [debug] [Thread-1 (]: Began running node seed.dw_bootcamp.Airline_Delay_Cause
+[0m23:30:41.181220 [info ] [Thread-1 (]: 1 of 1 START seed file public.Airline_Delay_Cause .............................. [RUN]
+[0m23:30:41.181789 [debug] [Thread-1 (]: Acquiring new postgres connection 'seed.dw_bootcamp.Airline_Delay_Cause'
+[0m23:30:41.182113 [debug] [Thread-1 (]: Began compiling node seed.dw_bootcamp.Airline_Delay_Cause
+[0m23:30:41.182451 [debug] [Thread-1 (]: Began executing node seed.dw_bootcamp.Airline_Delay_Cause
+[0m23:31:23.683170 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:31:23.683853 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "seed.dw_bootcamp.Airline_Delay_Cause"} */
+
+    create table "dbt_db"."public"."Airline_Delay_Cause" ("year" integer,"month" integer,"carrier" text,"carrier_name" text,"airport" text,"airport_name" text,"arr_flights" integer,"arr_del15" integer,"carrier_ct" float8,"weather_ct" float8,"nas_ct" float8,"security_ct" float8,"late_aircraft_ct" float8,"arr_cancelled" integer,"arr_diverted" integer,"arr_delay" integer,"carrier_delay" integer,"weather_delay" integer,"nas_delay" integer,"security_delay" integer,"late_aircraft_delay" integer)
+  
+[0m23:31:23.684368 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:31:23.714672 [debug] [Thread-1 (]: SQL status: CREATE TABLE in 0.030 seconds
+[0m23:31:55.224309 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:31:55.224985 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:31:56.091682 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.866 seconds
+[0m23:32:22.969887 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:32:22.970546 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:32:23.404962 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.434 seconds
+[0m23:32:45.641462 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:32:45.641935 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:32:46.096303 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.454 seconds
+[0m23:33:08.205037 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:33:08.205504 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:33:08.673103 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.467 seconds
+[0m23:33:30.816197 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:33:30.816678 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:33:31.253768 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.437 seconds
+[0m23:33:53.520145 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:33:53.520613 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:33:53.947064 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.426 seconds
+[0m23:34:17.065668 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:34:17.066148 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:34:17.550501 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.484 seconds
+[0m23:34:39.722935 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:34:39.723424 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:34:40.164387 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.440 seconds
+[0m23:35:02.390783 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:35:02.391253 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:35:02.832788 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.441 seconds
+[0m23:35:25.364193 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:35:25.364642 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:35:25.821108 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.456 seconds
+[0m23:35:48.199658 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:35:48.200143 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:35:48.621893 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.421 seconds
+[0m23:36:12.403519 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:36:12.403978 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:36:12.887215 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.483 seconds
+[0m23:36:34.868879 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:36:34.869460 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:36:35.320544 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.451 seconds
+[0m23:36:57.475428 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:36:57.475903 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:36:57.941664 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.465 seconds
+[0m23:37:20.711849 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:37:20.712364 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:37:21.143553 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.431 seconds
+[0m23:37:43.154558 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:37:43.155125 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:37:43.625663 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.470 seconds
+[0m23:38:05.720999 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:38:05.721575 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:38:06.190383 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.468 seconds
+[0m23:38:28.219307 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:38:28.219851 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:38:28.714262 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.494 seconds
+[0m23:38:50.875956 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:38:50.876454 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:38:51.361825 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.485 seconds
+[0m23:39:13.568309 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:39:13.568796 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:39:14.089053 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.520 seconds
+[0m23:39:36.239834 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:39:36.240296 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:39:36.691734 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.451 seconds
+[0m23:40:00.523424 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:40:00.523915 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:40:00.953060 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.429 seconds
+[0m23:40:23.288574 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:40:23.289052 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:40:23.757560 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.468 seconds
+[0m23:40:45.608251 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:40:45.608723 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:40:46.040945 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.432 seconds
+[0m23:41:07.885010 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:41:07.885471 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:41:08.304314 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.418 seconds
+[0m23:41:29.882199 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:41:29.882675 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:41:30.314176 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.431 seconds
+[0m23:41:51.892403 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:41:51.892883 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:41:52.313523 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.420 seconds
+[0m23:42:14.085425 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:42:14.085931 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:42:14.557669 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.471 seconds
+[0m23:42:36.101906 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:42:36.102372 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:42:36.600722 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.498 seconds
+[0m23:42:58.202411 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:42:58.202879 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:42:58.626866 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.424 seconds
+[0m23:43:20.423045 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:43:20.423667 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:43:20.857560 [debug] [Thread-1 (]: SQL status: INSERT 0 10000 in 0.433 seconds
+[0m23:43:38.147878 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:43:38.148351 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: 
+          insert into "dbt_db"."public"."Airline_Delay_Cause" ("year", "month", "carrier", "carrier_name", "airport", "airport_name", "arr_flights", "arr_del15", "carrier_ct", "weather_ct", "nas_ct", "security_ct", "late_aircraft_ct", "arr_cancelled", "arr_diverted", "arr_delay", "carrier_delay", "weather_delay", "nas_delay", "security_delay", "late_aircraft_delay") values
+          (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s...
+[0m23:43:38.532488 [debug] [Thread-1 (]: SQL status: INSERT 0 8017 in 0.384 seconds
+[0m23:43:38.542732 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:43:38.567091 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: COMMIT
+[0m23:43:38.567663 [debug] [Thread-1 (]: Using postgres connection "seed.dw_bootcamp.Airline_Delay_Cause"
+[0m23:43:38.568067 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: COMMIT
+[0m23:43:38.580246 [debug] [Thread-1 (]: SQL status: COMMIT in 0.012 seconds
+[0m23:43:38.582528 [debug] [Thread-1 (]: On seed.dw_bootcamp.Airline_Delay_Cause: Close
+[0m23:43:38.595044 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c57a268-bc34-43ba-bc48-c7ca759f5f84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C259E9A6D0>]}
+[0m23:43:38.595744 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file public.Airline_Delay_Cause .......................... [[32mINSERT 318017[0m in 777.40s]
+[0m23:43:38.596489 [debug] [Thread-1 (]: Finished running node seed.dw_bootcamp.Airline_Delay_Cause
+[0m23:43:38.598656 [debug] [MainThread]: On master: COMMIT
+[0m23:43:38.599057 [debug] [MainThread]: Using postgres connection "master"
+[0m23:43:38.599434 [debug] [MainThread]: On master: COMMIT
+[0m23:43:38.599741 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:43:38.611668 [debug] [MainThread]: SQL status: COMMIT in 0.012 seconds
+[0m23:43:38.612135 [debug] [MainThread]: On master: Close
+[0m23:43:38.612639 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:43:38.613005 [debug] [MainThread]: Connection 'list_dbt_db' was properly closed.
+[0m23:43:38.613247 [debug] [MainThread]: Connection 'list_dbt_db_public' was properly closed.
+[0m23:43:38.613471 [debug] [MainThread]: Connection 'seed.dw_bootcamp.Airline_Delay_Cause' was properly closed.
+[0m23:43:38.613749 [info ] [MainThread]: 
+[0m23:43:38.614140 [info ] [MainThread]: Finished running 1 seed in 0 hours 12 minutes and 57.67 seconds (777.67s).
+[0m23:43:38.614993 [debug] [MainThread]: Command end result
+[0m23:43:38.666577 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:43:38.671539 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:43:38.677345 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\run_results.json
+[0m23:43:38.677669 [info ] [MainThread]: 
+[0m23:43:38.678225 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:43:38.678582 [info ] [MainThread]: 
+[0m23:43:38.678942 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m23:43:38.679863 [debug] [MainThread]: Command `dbt seed` succeeded at 23:43:38.679762 after 782.90 seconds
+[0m23:43:38.680192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C25448F9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C259C0E690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C259E36A50>]}
+[0m23:43:38.680502 [debug] [MainThread]: Flushing usage events
+[0m23:43:39.554854 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:49:57.514232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205911C63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002058DEA6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205935C3B10>]}
+
+
+============================== 23:49:57.526569 | 425daf24-987a-45c3-b44b-f44358670a7d ==============================
+[0m23:49:57.526569 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:49:57.527185 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt build --exclude-resource-type seed', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m23:49:57.792826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '425daf24-987a-45c3-b44b-f44358670a7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205918B5810>]}
+[0m23:49:57.866873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '425daf24-987a-45c3-b44b-f44358670a7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205925B7460>]}
+[0m23:49:57.868572 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m23:49:58.304243 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m23:49:58.576646 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m23:49:58.577189 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\staging\stg_airline_delay_cause.sql
+[0m23:49:58.933550 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dw_bootcamp.mart
+- models.dw_bootcamp.intermediate
+[0m23:49:58.938356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '425daf24-987a-45c3-b44b-f44358670a7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020593A44950>]}
+[0m23:49:59.037940 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:49:59.041305 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:49:59.310751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '425daf24-987a-45c3-b44b-f44358670a7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205925AE6C0>]}
+[0m23:49:59.311254 [info ] [MainThread]: Found 1 seed, 1 model, 899 macros
+[0m23:49:59.313080 [info ] [MainThread]: 
+[0m23:49:59.313549 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:49:59.313937 [info ] [MainThread]: 
+[0m23:49:59.314477 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:49:59.315367 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db'
+[0m23:49:59.506737 [debug] [ThreadPool]: Using postgres connection "list_dbt_db"
+[0m23:49:59.507182 [debug] [ThreadPool]: On list_dbt_db: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:49:59.507561 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:49:59.526903 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.019 seconds
+[0m23:49:59.528176 [debug] [ThreadPool]: On list_dbt_db: Close
+[0m23:49:59.532858 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db_public'
+[0m23:49:59.539065 [debug] [ThreadPool]: Using postgres connection "list_dbt_db_public"
+[0m23:49:59.539376 [debug] [ThreadPool]: On list_dbt_db_public: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db_public"} */
+select
+      'dbt_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m23:49:59.539719 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:49:59.562946 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.023 seconds
+[0m23:49:59.564235 [debug] [ThreadPool]: On list_dbt_db_public: ROLLBACK
+[0m23:49:59.564923 [debug] [ThreadPool]: On list_dbt_db_public: Close
+[0m23:49:59.569892 [debug] [MainThread]: Using postgres connection "master"
+[0m23:49:59.570239 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:49:59.570556 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:49:59.595223 [debug] [MainThread]: SQL status: SELECT 0 in 0.025 seconds
+[0m23:49:59.596419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '425daf24-987a-45c3-b44b-f44358670a7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020593FBF4D0>]}
+[0m23:49:59.596848 [debug] [MainThread]: On master: ROLLBACK
+[0m23:49:59.597529 [debug] [MainThread]: On master: COMMIT
+[0m23:49:59.597882 [debug] [MainThread]: Using postgres connection "master"
+[0m23:49:59.598189 [debug] [MainThread]: On master: COMMIT
+[0m23:49:59.599087 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:49:59.599386 [debug] [MainThread]: On master: Close
+[0m23:49:59.604553 [debug] [Thread-1 (]: Began running node model.dw_bootcamp.stg_airline_delay_cause
+[0m23:49:59.605334 [info ] [Thread-1 (]: 1 of 1 START sql view model public.stg_airline_delay_cause ..................... [RUN]
+[0m23:49:59.605982 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dw_bootcamp.stg_airline_delay_cause'
+[0m23:49:59.606357 [debug] [Thread-1 (]: Began compiling node model.dw_bootcamp.stg_airline_delay_cause
+[0m23:49:59.613681 [debug] [Thread-1 (]: Writing injected SQL for node "model.dw_bootcamp.stg_airline_delay_cause"
+[0m23:49:59.616173 [debug] [Thread-1 (]: Began executing node model.dw_bootcamp.stg_airline_delay_cause
+[0m23:49:59.653548 [debug] [Thread-1 (]: Writing runtime sql for node "model.dw_bootcamp.stg_airline_delay_cause"
+[0m23:49:59.655734 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.stg_airline_delay_cause"
+[0m23:49:59.656397 [debug] [Thread-1 (]: On model.dw_bootcamp.stg_airline_delay_cause: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.stg_airline_delay_cause"} */
+
+  create view "dbt_db"."public"."stg_airline_delay_cause__dbt_tmp"
+    
+    
+  as (
+    with src as (
+
+    select
+        year,
+        month,
+        carrier,
+        carrier_name,
+        airport,
+        airport_name,
+        arr_flights,
+        arr_del15,
+        carrier_ct,
+        weather_ct,
+        nas_ct,
+        security_ct,
+        late_aircraft_ct,
+        arr_cancelled,
+        arr_diverted,
+        arr_delay,
+        carrier_delay,
+        weather_delay,
+        nas_delay,
+        security_delay,
+        late_aircraft_delay
+    from "dbt_db"."public"."Airline_Delay_Cause"
+
+),
+
+typed as (
+
+    select
+        cast(year as integer)  as year,
+        cast(month as integer) as month,
+
+        cast(carrier as text)       as carrier,
+        cast(carrier_name as text)  as carrier_name,
+
+        cast(airport as text)       as airport,
+        cast(airport_name as text)  as airport_name,
+
+        cast(arr_flights as integer) as arr_flights,
+        cast(arr_del15 as integer)   as arr_del15,
+
+        cast(carrier_ct as numeric)       as carrier_ct,
+        cast(weather_ct as numeric)       as weather_ct,
+        cast(nas_ct as numeric)           as nas_ct,
+        cast(security_ct as numeric)      as security_ct,
+        cast(late_aircraft_ct as numeric) as late_aircraft_ct,
+
+        cast(arr_cancelled as integer) as arr_cancelled,
+        cast(arr_diverted as integer)  as arr_diverted,
+
+        cast(arr_delay as integer)          as arr_delay,
+        cast(carrier_delay as integer)      as carrier_delay,
+        cast(weather_delay as integer)      as weather_delay,
+        cast(nas_delay as integer)          as nas_delay,
+        cast(security_delay as integer)     as security_delay,
+        cast(late_aircraft_delay as integer) as late_aircraft_delay,
+
+        (cast(year as integer) * 100 + cast(month as integer)) as year_month_key
+
+    from src
+)
+
+select *
+from typed
+  );
+[0m23:49:59.656951 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:49:59.684724 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.028 seconds
+[0m23:49:59.691550 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.stg_airline_delay_cause"
+[0m23:49:59.691975 [debug] [Thread-1 (]: On model.dw_bootcamp.stg_airline_delay_cause: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.stg_airline_delay_cause"} */
+alter table "dbt_db"."public"."stg_airline_delay_cause__dbt_tmp" rename to "stg_airline_delay_cause"
+[0m23:49:59.693294 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:49:59.709535 [debug] [Thread-1 (]: On model.dw_bootcamp.stg_airline_delay_cause: COMMIT
+[0m23:49:59.709975 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.stg_airline_delay_cause"
+[0m23:49:59.710281 [debug] [Thread-1 (]: On model.dw_bootcamp.stg_airline_delay_cause: COMMIT
+[0m23:49:59.724986 [debug] [Thread-1 (]: SQL status: COMMIT in 0.014 seconds
+[0m23:49:59.730993 [debug] [Thread-1 (]: Applying DROP to: "dbt_db"."public"."stg_airline_delay_cause__dbt_backup"
+[0m23:49:59.735204 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.stg_airline_delay_cause"
+[0m23:49:59.735536 [debug] [Thread-1 (]: On model.dw_bootcamp.stg_airline_delay_cause: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.stg_airline_delay_cause"} */
+drop view if exists "dbt_db"."public"."stg_airline_delay_cause__dbt_backup" cascade
+[0m23:49:59.737216 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m23:49:59.739426 [debug] [Thread-1 (]: On model.dw_bootcamp.stg_airline_delay_cause: Close
+[0m23:49:59.741810 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '425daf24-987a-45c3-b44b-f44358670a7d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002059414BC70>]}
+[0m23:49:59.742429 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public.stg_airline_delay_cause ................ [[32mCREATE VIEW[0m in 0.13s]
+[0m23:49:59.743077 [debug] [Thread-1 (]: Finished running node model.dw_bootcamp.stg_airline_delay_cause
+[0m23:49:59.744311 [debug] [MainThread]: On master: COMMIT
+[0m23:49:59.744613 [debug] [MainThread]: Using postgres connection "master"
+[0m23:49:59.744883 [debug] [MainThread]: On master: COMMIT
+[0m23:49:59.745116 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:49:59.757005 [debug] [MainThread]: SQL status: COMMIT in 0.012 seconds
+[0m23:49:59.757527 [debug] [MainThread]: On master: Close
+[0m23:49:59.758032 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:49:59.758325 [debug] [MainThread]: Connection 'list_dbt_db' was properly closed.
+[0m23:49:59.758557 [debug] [MainThread]: Connection 'list_dbt_db_public' was properly closed.
+[0m23:49:59.758772 [debug] [MainThread]: Connection 'model.dw_bootcamp.stg_airline_delay_cause' was properly closed.
+[0m23:49:59.759077 [info ] [MainThread]: 
+[0m23:49:59.759542 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.44 seconds (0.44s).
+[0m23:49:59.760512 [debug] [MainThread]: Command end result
+[0m23:49:59.810117 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:49:59.813500 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:49:59.820173 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\run_results.json
+[0m23:49:59.820525 [info ] [MainThread]: 
+[0m23:49:59.820985 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:49:59.821358 [info ] [MainThread]: 
+[0m23:49:59.821716 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m23:49:59.822781 [debug] [MainThread]: Command `dbt build` succeeded at 23:49:59.822675 after 2.50 seconds
+[0m23:49:59.823112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002059240B110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020593CF5FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020593CF6150>]}
+[0m23:49:59.823426 [debug] [MainThread]: Flushing usage events
+[0m23:50:00.646670 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:22:49.432482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE4DD63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE1AB6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE71E3B10>]}
+
+
+============================== 23:22:49.437884 | 84aa2016-b255-4231-a1a4-ef99e8d5783a ==============================
+[0m23:22:49.437884 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:22:49.438538 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select intermediate', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m23:22:49.977103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE54D5810>]}
+[0m23:22:50.049896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE61D2580>]}
+[0m23:22:50.051687 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m23:22:50.605953 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m23:22:52.883720 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 9 files added, 0 files changed.
+[0m23:22:52.884303 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\intermediate\int_dim_month.sql
+[0m23:22:52.884641 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\intermediate\int_dim_airport.sql
+[0m23:22:52.884937 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\intermediate\int_fct_flight_delays.sql
+[0m23:22:52.885217 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\mart\mart_delay_causes_share_month.sql
+[0m23:22:52.885531 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\mart\mart_delay_causes_long.sql
+[0m23:22:52.885805 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\mart\mart_monthly_kpis.sql
+[0m23:22:52.886072 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\mart\mart_carrier_performance.sql
+[0m23:22:52.886342 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\intermediate\int_dim_carrier.sql
+[0m23:22:52.886609 [debug] [MainThread]: Partial parsing: added file: dw_bootcamp://models\mart\mart_airport_performance.sql
+[0m23:22:53.267879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE7644F50>]}
+[0m23:22:53.369193 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:22:53.384028 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:22:53.417967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE61CEC60>]}
+[0m23:22:53.418551 [info ] [MainThread]: Found 1 seed, 10 models, 899 macros
+[0m23:22:53.419038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE737E430>]}
+[0m23:22:53.421375 [info ] [MainThread]: 
+[0m23:22:53.421823 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:22:53.422182 [info ] [MainThread]: 
+[0m23:22:53.422675 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:22:53.426978 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db'
+[0m23:22:55.712595 [debug] [ThreadPool]: Using postgres connection "list_dbt_db"
+[0m23:22:55.713109 [debug] [ThreadPool]: On list_dbt_db: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:22:55.713535 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:22:55.784511 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.071 seconds
+[0m23:22:55.785836 [debug] [ThreadPool]: On list_dbt_db: Close
+[0m23:22:55.788504 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db_public'
+[0m23:22:55.794466 [debug] [ThreadPool]: Using postgres connection "list_dbt_db_public"
+[0m23:22:55.794883 [debug] [ThreadPool]: On list_dbt_db_public: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db_public"} */
+select
+      'dbt_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m23:22:55.795172 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:22:55.812923 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.018 seconds
+[0m23:22:55.814202 [debug] [ThreadPool]: On list_dbt_db_public: ROLLBACK
+[0m23:22:55.814900 [debug] [ThreadPool]: On list_dbt_db_public: Close
+[0m23:22:55.820684 [debug] [MainThread]: Using postgres connection "master"
+[0m23:22:55.821031 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:22:55.821366 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:22:55.862041 [debug] [MainThread]: SQL status: SELECT 1 in 0.041 seconds
+[0m23:22:55.863555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE7E2C940>]}
+[0m23:22:55.863996 [debug] [MainThread]: On master: ROLLBACK
+[0m23:22:55.864761 [debug] [MainThread]: On master: COMMIT
+[0m23:22:55.865105 [debug] [MainThread]: Using postgres connection "master"
+[0m23:22:55.865364 [debug] [MainThread]: On master: COMMIT
+[0m23:22:55.866307 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:22:55.866585 [debug] [MainThread]: On master: Close
+[0m23:22:55.872786 [debug] [Thread-3 (]: Began running node model.dw_bootcamp.int_dim_month
+[0m23:22:55.873218 [debug] [Thread-4 (]: Began running node model.dw_bootcamp.int_fct_flight_delays
+[0m23:22:55.873558 [debug] [Thread-1 (]: Began running node model.dw_bootcamp.int_dim_airport
+[0m23:22:55.873896 [debug] [Thread-2 (]: Began running node model.dw_bootcamp.int_dim_carrier
+[0m23:22:55.874517 [info ] [Thread-3 (]: 3 of 4 START sql table model public.int_dim_month .............................. [RUN]
+[0m23:22:55.875000 [info ] [Thread-4 (]: 4 of 4 START sql table model public.int_fct_flight_delays ...................... [RUN]
+[0m23:22:55.876717 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.dw_bootcamp.int_dim_month'
+[0m23:22:55.877214 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.dw_bootcamp.int_fct_flight_delays'
+[0m23:22:55.875486 [info ] [Thread-1 (]: 1 of 4 START sql table model public.int_dim_airport ............................ [RUN]
+[0m23:22:55.877662 [debug] [Thread-3 (]: Began compiling node model.dw_bootcamp.int_dim_month
+[0m23:22:55.876079 [info ] [Thread-2 (]: 2 of 4 START sql table model public.int_dim_carrier ............................ [RUN]
+[0m23:22:55.878128 [debug] [Thread-4 (]: Began compiling node model.dw_bootcamp.int_fct_flight_delays
+[0m23:22:55.878590 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dw_bootcamp.int_dim_airport'
+[0m23:22:55.886577 [debug] [Thread-3 (]: Writing injected SQL for node "model.dw_bootcamp.int_dim_month"
+[0m23:22:55.887092 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dw_bootcamp.int_dim_carrier'
+[0m23:22:55.889676 [debug] [Thread-4 (]: Writing injected SQL for node "model.dw_bootcamp.int_fct_flight_delays"
+[0m23:22:55.890069 [debug] [Thread-1 (]: Began compiling node model.dw_bootcamp.int_dim_airport
+[0m23:22:55.890642 [debug] [Thread-2 (]: Began compiling node model.dw_bootcamp.int_dim_carrier
+[0m23:22:55.896036 [debug] [Thread-1 (]: Writing injected SQL for node "model.dw_bootcamp.int_dim_airport"
+[0m23:22:55.898891 [debug] [Thread-2 (]: Writing injected SQL for node "model.dw_bootcamp.int_dim_carrier"
+[0m23:22:55.899792 [debug] [Thread-3 (]: Began executing node model.dw_bootcamp.int_dim_month
+[0m23:22:55.939326 [debug] [Thread-3 (]: Writing runtime sql for node "model.dw_bootcamp.int_dim_month"
+[0m23:22:55.940198 [debug] [Thread-1 (]: Began executing node model.dw_bootcamp.int_dim_airport
+[0m23:22:55.940658 [debug] [Thread-4 (]: Began executing node model.dw_bootcamp.int_fct_flight_delays
+[0m23:22:55.941009 [debug] [Thread-2 (]: Began executing node model.dw_bootcamp.int_dim_carrier
+[0m23:22:55.945835 [debug] [Thread-1 (]: Writing runtime sql for node "model.dw_bootcamp.int_dim_airport"
+[0m23:22:55.949477 [debug] [Thread-4 (]: Writing runtime sql for node "model.dw_bootcamp.int_fct_flight_delays"
+[0m23:22:55.953224 [debug] [Thread-2 (]: Writing runtime sql for node "model.dw_bootcamp.int_dim_carrier"
+[0m23:22:55.954041 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.int_dim_month"
+[0m23:22:55.954648 [debug] [Thread-3 (]: On model.dw_bootcamp.int_dim_month: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_month"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."int_dim_month__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with base as (
+    select distinct
+        year,
+        month,
+        year_month_key
+    from "dbt_db"."public"."stg_airline_delay_cause"
+)
+
+select
+    year_month_key                     as month_id,
+    year,
+    month
+from base
+  );
+  
+[0m23:22:55.955094 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:22:55.955931 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.int_fct_flight_delays"
+[0m23:22:55.956369 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.int_dim_carrier"
+[0m23:22:55.956810 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.int_dim_airport"
+[0m23:22:55.957216 [debug] [Thread-4 (]: On model.dw_bootcamp.int_fct_flight_delays: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_fct_flight_delays"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."int_fct_flight_delays__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with stg as (
+    select * from "dbt_db"."public"."stg_airline_delay_cause"
+),
+
+fct as (
+    select
+        -- chaves do DW
+        stg.year_month_key                       as month_id,
+        stg.carrier                              as carrier_id,
+        stg.airport                              as airport_id,
+
+        -- métricas
+        stg.arr_flights,
+        stg.arr_del15,
+        stg.arr_cancelled,
+        stg.arr_diverted,
+
+        -- atrasos (minutos)
+        stg.arr_delay,
+        stg.carrier_delay,
+        stg.weather_delay,
+        stg.nas_delay,
+        stg.security_delay,
+        stg.late_aircraft_delay,
+
+        -- contagens por causa (ocorrências)
+        stg.carrier_ct,
+        stg.weather_ct,
+        stg.nas_ct,
+        stg.security_ct,
+        stg.late_aircraft_ct
+
+    from stg
+)
+
+select * from fct
+  );
+  
+[0m23:22:55.957617 [debug] [Thread-2 (]: On model.dw_bootcamp.int_dim_carrier: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_carrier"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."int_dim_carrier__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with base as (
+    select
+        carrier,
+        carrier_name
+    from "dbt_db"."public"."stg_airline_delay_cause"
+)
+
+select
+    carrier                              as carrier_id,
+    max(carrier_name)                    as carrier_name
+from base
+group by carrier
+  );
+  
+[0m23:22:55.958003 [debug] [Thread-1 (]: On model.dw_bootcamp.int_dim_airport: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_airport"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."int_dim_airport__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with base as (
+    select
+        airport,
+        airport_name
+    from "dbt_db"."public"."stg_airline_delay_cause"
+)
+
+select
+    airport                              as airport_id,
+    max(airport_name)                    as airport_name
+from base
+group by airport
+  );
+  
+[0m23:22:55.958377 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:22:55.958722 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:22:55.959650 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:22:56.114418 [debug] [Thread-1 (]: SQL status: SELECT 421 in 0.155 seconds
+[0m23:22:56.115029 [debug] [Thread-2 (]: SQL status: SELECT 30 in 0.156 seconds
+[0m23:22:56.126768 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.int_dim_airport"
+[0m23:22:56.130704 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.int_dim_carrier"
+[0m23:22:56.131095 [debug] [Thread-3 (]: SQL status: SELECT 228 in 0.176 seconds
+[0m23:22:56.131455 [debug] [Thread-1 (]: On model.dw_bootcamp.int_dim_airport: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_airport"} */
+alter table "dbt_db"."public"."int_dim_airport__dbt_tmp" rename to "int_dim_airport"
+[0m23:22:56.131877 [debug] [Thread-2 (]: On model.dw_bootcamp.int_dim_carrier: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_carrier"} */
+alter table "dbt_db"."public"."int_dim_carrier__dbt_tmp" rename to "int_dim_carrier"
+[0m23:22:56.134990 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.int_dim_month"
+[0m23:22:56.135508 [debug] [Thread-3 (]: On model.dw_bootcamp.int_dim_month: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_month"} */
+alter table "dbt_db"."public"."int_dim_month__dbt_tmp" rename to "int_dim_month"
+[0m23:22:56.136343 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:22:56.136800 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:22:56.137115 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m23:22:56.152812 [debug] [Thread-2 (]: On model.dw_bootcamp.int_dim_carrier: COMMIT
+[0m23:22:56.154718 [debug] [Thread-3 (]: On model.dw_bootcamp.int_dim_month: COMMIT
+[0m23:22:56.156373 [debug] [Thread-1 (]: On model.dw_bootcamp.int_dim_airport: COMMIT
+[0m23:22:56.156830 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.int_dim_carrier"
+[0m23:22:56.157286 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.int_dim_month"
+[0m23:22:56.157644 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.int_dim_airport"
+[0m23:22:56.158072 [debug] [Thread-2 (]: On model.dw_bootcamp.int_dim_carrier: COMMIT
+[0m23:22:56.158549 [debug] [Thread-3 (]: On model.dw_bootcamp.int_dim_month: COMMIT
+[0m23:22:56.158933 [debug] [Thread-1 (]: On model.dw_bootcamp.int_dim_airport: COMMIT
+[0m23:22:56.188217 [debug] [Thread-3 (]: SQL status: COMMIT in 0.029 seconds
+[0m23:22:56.188664 [debug] [Thread-2 (]: SQL status: COMMIT in 0.029 seconds
+[0m23:22:56.189019 [debug] [Thread-1 (]: SQL status: COMMIT in 0.029 seconds
+[0m23:22:56.196573 [debug] [Thread-3 (]: Applying DROP to: "dbt_db"."public"."int_dim_month__dbt_backup"
+[0m23:22:56.199084 [debug] [Thread-2 (]: Applying DROP to: "dbt_db"."public"."int_dim_carrier__dbt_backup"
+[0m23:22:56.201371 [debug] [Thread-1 (]: Applying DROP to: "dbt_db"."public"."int_dim_airport__dbt_backup"
+[0m23:22:56.205896 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.int_dim_month"
+[0m23:22:56.206595 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.int_dim_carrier"
+[0m23:22:56.207335 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.int_dim_airport"
+[0m23:22:56.207755 [debug] [Thread-3 (]: On model.dw_bootcamp.int_dim_month: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_month"} */
+drop table if exists "dbt_db"."public"."int_dim_month__dbt_backup" cascade
+[0m23:22:56.208155 [debug] [Thread-2 (]: On model.dw_bootcamp.int_dim_carrier: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_carrier"} */
+drop table if exists "dbt_db"."public"."int_dim_carrier__dbt_backup" cascade
+[0m23:22:56.208543 [debug] [Thread-1 (]: On model.dw_bootcamp.int_dim_airport: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_dim_airport"} */
+drop table if exists "dbt_db"."public"."int_dim_airport__dbt_backup" cascade
+[0m23:22:56.211860 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m23:22:56.212269 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m23:22:56.212605 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m23:22:56.214880 [debug] [Thread-2 (]: On model.dw_bootcamp.int_dim_carrier: Close
+[0m23:22:56.216063 [debug] [Thread-3 (]: On model.dw_bootcamp.int_dim_month: Close
+[0m23:22:56.217095 [debug] [Thread-1 (]: On model.dw_bootcamp.int_dim_airport: Close
+[0m23:22:56.220540 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE7733AD0>]}
+[0m23:22:56.220856 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE83781B0>]}
+[0m23:22:56.221136 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE8378260>]}
+[0m23:22:56.221685 [info ] [Thread-2 (]: 2 of 4 OK created sql table model public.int_dim_carrier ....................... [[32mSELECT 30[0m in 0.33s]
+[0m23:22:56.223326 [debug] [Thread-2 (]: Finished running node model.dw_bootcamp.int_dim_carrier
+[0m23:22:56.222207 [info ] [Thread-3 (]: 3 of 4 OK created sql table model public.int_dim_month ......................... [[32mSELECT 228[0m in 0.34s]
+[0m23:22:56.224149 [debug] [Thread-3 (]: Finished running node model.dw_bootcamp.int_dim_month
+[0m23:22:56.222831 [info ] [Thread-1 (]: 1 of 4 OK created sql table model public.int_dim_airport ....................... [[32mSELECT 421[0m in 0.34s]
+[0m23:22:56.224815 [debug] [Thread-1 (]: Finished running node model.dw_bootcamp.int_dim_airport
+[0m23:22:57.082320 [debug] [Thread-4 (]: SQL status: SELECT 318017 in 1.124 seconds
+[0m23:22:57.085857 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.int_fct_flight_delays"
+[0m23:22:57.086223 [debug] [Thread-4 (]: On model.dw_bootcamp.int_fct_flight_delays: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_fct_flight_delays"} */
+alter table "dbt_db"."public"."int_fct_flight_delays__dbt_tmp" rename to "int_fct_flight_delays"
+[0m23:22:57.087250 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:22:57.088966 [debug] [Thread-4 (]: On model.dw_bootcamp.int_fct_flight_delays: COMMIT
+[0m23:22:57.089308 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.int_fct_flight_delays"
+[0m23:22:57.089609 [debug] [Thread-4 (]: On model.dw_bootcamp.int_fct_flight_delays: COMMIT
+[0m23:22:57.119467 [debug] [Thread-4 (]: SQL status: COMMIT in 0.029 seconds
+[0m23:22:57.122340 [debug] [Thread-4 (]: Applying DROP to: "dbt_db"."public"."int_fct_flight_delays__dbt_backup"
+[0m23:22:57.123044 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.int_fct_flight_delays"
+[0m23:22:57.123369 [debug] [Thread-4 (]: On model.dw_bootcamp.int_fct_flight_delays: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.int_fct_flight_delays"} */
+drop table if exists "dbt_db"."public"."int_fct_flight_delays__dbt_backup" cascade
+[0m23:22:57.124358 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m23:22:57.125752 [debug] [Thread-4 (]: On model.dw_bootcamp.int_fct_flight_delays: Close
+[0m23:22:57.126531 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84aa2016-b255-4231-a1a4-ef99e8d5783a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE7D6C3D0>]}
+[0m23:22:57.127416 [info ] [Thread-4 (]: 4 of 4 OK created sql table model public.int_fct_flight_delays ................. [[32mSELECT 318017[0m in 1.25s]
+[0m23:22:57.128315 [debug] [Thread-4 (]: Finished running node model.dw_bootcamp.int_fct_flight_delays
+[0m23:22:57.129824 [debug] [MainThread]: On master: COMMIT
+[0m23:22:57.130151 [debug] [MainThread]: Using postgres connection "master"
+[0m23:22:57.130403 [debug] [MainThread]: On master: COMMIT
+[0m23:22:57.130643 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:22:57.154202 [debug] [MainThread]: SQL status: COMMIT in 0.023 seconds
+[0m23:22:57.154655 [debug] [MainThread]: On master: Close
+[0m23:22:57.155215 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:22:57.155539 [debug] [MainThread]: Connection 'list_dbt_db' was properly closed.
+[0m23:22:57.155838 [debug] [MainThread]: Connection 'list_dbt_db_public' was properly closed.
+[0m23:22:57.156119 [debug] [MainThread]: Connection 'model.dw_bootcamp.int_dim_month' was properly closed.
+[0m23:22:57.156388 [debug] [MainThread]: Connection 'model.dw_bootcamp.int_fct_flight_delays' was properly closed.
+[0m23:22:57.156657 [debug] [MainThread]: Connection 'model.dw_bootcamp.int_dim_airport' was properly closed.
+[0m23:22:57.156923 [debug] [MainThread]: Connection 'model.dw_bootcamp.int_dim_carrier' was properly closed.
+[0m23:22:57.157324 [info ] [MainThread]: 
+[0m23:22:57.157812 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 3.73 seconds (3.73s).
+[0m23:22:57.159043 [debug] [MainThread]: Command end result
+[0m23:22:57.219989 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:22:57.223295 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:22:57.230744 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\run_results.json
+[0m23:22:57.231164 [info ] [MainThread]: 
+[0m23:22:57.231626 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:22:57.231980 [info ] [MainThread]: 
+[0m23:22:57.232330 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m23:22:57.233332 [debug] [MainThread]: Command `dbt run` succeeded at 23:22:57.233226 after 7.95 seconds
+[0m23:22:57.233665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE7216C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FDF59BEE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FE7ACC4D0>]}
+[0m23:22:57.233987 [debug] [MainThread]: Flushing usage events
+[0m23:22:58.070859 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:23:40.559960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACC1823C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013AC8EF6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACE577C50>]}
+
+
+============================== 23:23:40.564710 | 8333554a-d9e9-44b2-9f3f-6c7fc3a553e2 ==============================
+[0m23:23:40.564710 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:23:40.565376 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select mart', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m23:23:40.779227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACC85D940>]}
+[0m23:23:40.856727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACD562580>]}
+[0m23:23:40.858903 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m23:23:41.296279 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m23:23:41.555142 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:23:41.555672 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:23:41.556014 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:23:41.601712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACE9A5150>]}
+[0m23:23:41.815946 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:23:41.820022 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:23:41.834854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACD55E6C0>]}
+[0m23:23:41.835332 [info ] [MainThread]: Found 1 seed, 10 models, 899 macros
+[0m23:23:41.835760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACE6E3CB0>]}
+[0m23:23:41.837614 [info ] [MainThread]: 
+[0m23:23:41.838068 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:23:41.838498 [info ] [MainThread]: 
+[0m23:23:41.839044 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:23:41.843819 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db'
+[0m23:23:41.983492 [debug] [ThreadPool]: Using postgres connection "list_dbt_db"
+[0m23:23:41.983958 [debug] [ThreadPool]: On list_dbt_db: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:23:41.984368 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:23:42.005095 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.021 seconds
+[0m23:23:42.006436 [debug] [ThreadPool]: On list_dbt_db: Close
+[0m23:23:42.009251 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db_public'
+[0m23:23:42.015446 [debug] [ThreadPool]: Using postgres connection "list_dbt_db_public"
+[0m23:23:42.015913 [debug] [ThreadPool]: On list_dbt_db_public: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db_public"} */
+select
+      'dbt_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m23:23:42.016245 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:23:42.030804 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.014 seconds
+[0m23:23:42.032535 [debug] [ThreadPool]: On list_dbt_db_public: ROLLBACK
+[0m23:23:42.033312 [debug] [ThreadPool]: On list_dbt_db_public: Close
+[0m23:23:42.041377 [debug] [MainThread]: Using postgres connection "master"
+[0m23:23:42.041915 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:23:42.042471 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:23:42.058913 [debug] [MainThread]: SQL status: SELECT 1 in 0.016 seconds
+[0m23:23:42.060945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACEB453D0>]}
+[0m23:23:42.061381 [debug] [MainThread]: On master: ROLLBACK
+[0m23:23:42.062121 [debug] [MainThread]: On master: COMMIT
+[0m23:23:42.062570 [debug] [MainThread]: Using postgres connection "master"
+[0m23:23:42.062903 [debug] [MainThread]: On master: COMMIT
+[0m23:23:42.063930 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:23:42.064261 [debug] [MainThread]: On master: Close
+[0m23:23:42.069127 [debug] [Thread-3 (]: Began running node model.dw_bootcamp.mart_delay_causes_long
+[0m23:23:42.069622 [debug] [Thread-4 (]: Began running node model.dw_bootcamp.mart_delay_causes_share_month
+[0m23:23:42.070023 [debug] [Thread-1 (]: Began running node model.dw_bootcamp.mart_airport_performance
+[0m23:23:42.070483 [debug] [Thread-2 (]: Began running node model.dw_bootcamp.mart_carrier_performance
+[0m23:23:42.071008 [info ] [Thread-3 (]: 3 of 5 START sql table model public.mart_delay_causes_long ..................... [RUN]
+[0m23:23:42.071500 [info ] [Thread-4 (]: 4 of 5 START sql table model public.mart_delay_causes_share_month .............. [RUN]
+[0m23:23:42.073153 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.dw_bootcamp.mart_delay_causes_long'
+[0m23:23:42.073657 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.dw_bootcamp.mart_delay_causes_share_month'
+[0m23:23:42.072072 [info ] [Thread-1 (]: 1 of 5 START sql table model public.mart_airport_performance ................... [RUN]
+[0m23:23:42.074351 [debug] [Thread-3 (]: Began compiling node model.dw_bootcamp.mart_delay_causes_long
+[0m23:23:42.072541 [info ] [Thread-2 (]: 2 of 5 START sql table model public.mart_carrier_performance ................... [RUN]
+[0m23:23:42.074814 [debug] [Thread-4 (]: Began compiling node model.dw_bootcamp.mart_delay_causes_share_month
+[0m23:23:42.075360 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dw_bootcamp.mart_airport_performance'
+[0m23:23:42.087493 [debug] [Thread-3 (]: Writing injected SQL for node "model.dw_bootcamp.mart_delay_causes_long"
+[0m23:23:42.088086 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dw_bootcamp.mart_carrier_performance'
+[0m23:23:42.090915 [debug] [Thread-4 (]: Writing injected SQL for node "model.dw_bootcamp.mart_delay_causes_share_month"
+[0m23:23:42.091419 [debug] [Thread-1 (]: Began compiling node model.dw_bootcamp.mart_airport_performance
+[0m23:23:42.092053 [debug] [Thread-2 (]: Began compiling node model.dw_bootcamp.mart_carrier_performance
+[0m23:23:42.096047 [debug] [Thread-1 (]: Writing injected SQL for node "model.dw_bootcamp.mart_airport_performance"
+[0m23:23:42.099218 [debug] [Thread-2 (]: Writing injected SQL for node "model.dw_bootcamp.mart_carrier_performance"
+[0m23:23:42.100109 [debug] [Thread-3 (]: Began executing node model.dw_bootcamp.mart_delay_causes_long
+[0m23:23:42.100663 [debug] [Thread-4 (]: Began executing node model.dw_bootcamp.mart_delay_causes_share_month
+[0m23:23:42.141953 [debug] [Thread-3 (]: Writing runtime sql for node "model.dw_bootcamp.mart_delay_causes_long"
+[0m23:23:42.145775 [debug] [Thread-4 (]: Writing runtime sql for node "model.dw_bootcamp.mart_delay_causes_share_month"
+[0m23:23:42.146393 [debug] [Thread-2 (]: Began executing node model.dw_bootcamp.mart_carrier_performance
+[0m23:23:42.146907 [debug] [Thread-1 (]: Began executing node model.dw_bootcamp.mart_airport_performance
+[0m23:23:42.150435 [debug] [Thread-2 (]: Writing runtime sql for node "model.dw_bootcamp.mart_carrier_performance"
+[0m23:23:42.153869 [debug] [Thread-1 (]: Writing runtime sql for node "model.dw_bootcamp.mart_airport_performance"
+[0m23:23:42.155003 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_long"
+[0m23:23:42.155491 [debug] [Thread-3 (]: On model.dw_bootcamp.mart_delay_causes_long: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_delay_causes_long"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."mart_delay_causes_long__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with fct as (
+    select * from "dbt_db"."public"."int_fct_flight_delays"
+),
+
+unpivoted as (
+
+    select month_id, carrier_id, airport_id, 'carrier' as cause, carrier_delay as delay_minutes from fct
+    union all
+    select month_id, carrier_id, airport_id, 'weather' as cause, weather_delay as delay_minutes from fct
+    union all
+    select month_id, carrier_id, airport_id, 'nas' as cause, nas_delay as delay_minutes from fct
+    union all
+    select month_id, carrier_id, airport_id, 'security' as cause, security_delay as delay_minutes from fct
+    union all
+    select month_id, carrier_id, airport_id, 'late_aircraft' as cause, late_aircraft_delay as delay_minutes from fct
+
+)
+
+select * from unpivoted
+  );
+  
+[0m23:23:42.155994 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:23:42.156717 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.mart_carrier_performance"
+[0m23:23:42.157262 [debug] [Thread-2 (]: On model.dw_bootcamp.mart_carrier_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_carrier_performance"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."mart_carrier_performance__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with fct as (
+    select * from "dbt_db"."public"."int_fct_flight_delays"
+),
+dim_carrier as (
+    select * from "dbt_db"."public"."int_dim_carrier"
+)
+
+select
+    c.carrier_id,
+    c.carrier_name,
+
+    sum(f.arr_flights) as flights,
+    sum(f.arr_del15)   as delayed_15m,
+
+    case when sum(f.arr_flights) = 0 then 0
+         else 1.0 * sum(f.arr_del15) / sum(f.arr_flights)
+    end                as pct_delayed_15m,
+
+    sum(f.arr_cancelled) as cancelled,
+    sum(f.arr_delay)     as total_delay_minutes
+
+from fct f
+join dim_carrier c
+  on f.carrier_id = c.carrier_id
+group by 1,2
+  );
+  
+[0m23:23:42.157887 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_share_month"
+[0m23:23:42.158430 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_airport_performance"
+[0m23:23:42.159007 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:23:42.159663 [debug] [Thread-4 (]: On model.dw_bootcamp.mart_delay_causes_share_month: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_delay_causes_share_month"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."mart_delay_causes_share_month__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with fct as (
+    select * from "dbt_db"."public"."int_fct_flight_delays"
+),
+
+by_month as (
+    select
+        month_id,
+        sum(arr_delay)             as total_delay,
+        sum(carrier_delay)         as carrier_delay,
+        sum(weather_delay)         as weather_delay,
+        sum(nas_delay)             as nas_delay,
+        sum(security_delay)        as security_delay,
+        sum(late_aircraft_delay)   as late_aircraft_delay
+    from fct
+    group by 1
+)
+
+select
+    month_id,
+    total_delay,
+
+    case when total_delay = 0 then 0 else 1.0 * carrier_delay / total_delay end       as pct_carrier,
+    case when total_delay = 0 then 0 else 1.0 * weather_delay / total_delay end       as pct_weather,
+    case when total_delay = 0 then 0 else 1.0 * nas_delay / total_delay end           as pct_nas,
+    case when total_delay = 0 then 0 else 1.0 * security_delay / total_delay end      as pct_security,
+    case when total_delay = 0 then 0 else 1.0 * late_aircraft_delay / total_delay end as pct_late_aircraft
+
+from by_month
+  );
+  
+[0m23:23:42.160363 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_airport_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_airport_performance"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."mart_airport_performance__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with fct as (
+    select * from "dbt_db"."public"."int_fct_flight_delays"
+),
+dim_airport as (
+    select * from "dbt_db"."public"."int_dim_airport"
+)
+
+select
+    a.airport_id,
+    a.airport_name,
+
+    sum(f.arr_flights) as flights,
+    sum(f.arr_del15)   as delayed_15m,
+
+    case when sum(f.arr_flights) = 0 then 0
+         else 1.0 * sum(f.arr_del15) / sum(f.arr_flights)
+    end                as pct_delayed_15m,
+
+    sum(f.arr_cancelled) as cancelled,
+    sum(f.arr_delay)     as total_delay_minutes
+
+from fct f
+join dim_airport a
+  on f.airport_id = a.airport_id
+group by 1,2
+  );
+  
+[0m23:23:42.161058 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:23:42.161874 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:23:42.250985 [debug] [Thread-2 (]: SQL status: SELECT 29 in 0.092 seconds
+[0m23:23:42.251723 [debug] [Thread-1 (]: SQL status: SELECT 420 in 0.090 seconds
+[0m23:23:42.264608 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.mart_carrier_performance"
+[0m23:23:42.265206 [debug] [Thread-4 (]: SQL status: SELECT 228 in 0.104 seconds
+[0m23:23:42.269215 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_airport_performance"
+[0m23:23:42.269727 [debug] [Thread-2 (]: On model.dw_bootcamp.mart_carrier_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_carrier_performance"} */
+alter table "dbt_db"."public"."mart_carrier_performance__dbt_tmp" rename to "mart_carrier_performance"
+[0m23:23:42.273107 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_share_month"
+[0m23:23:42.273494 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_airport_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_airport_performance"} */
+alter table "dbt_db"."public"."mart_airport_performance__dbt_tmp" rename to "mart_airport_performance"
+[0m23:23:42.274403 [debug] [Thread-4 (]: On model.dw_bootcamp.mart_delay_causes_share_month: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_delay_causes_share_month"} */
+alter table "dbt_db"."public"."mart_delay_causes_share_month__dbt_tmp" rename to "mart_delay_causes_share_month"
+[0m23:23:42.277924 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m23:23:42.278349 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m23:23:42.278669 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m23:23:42.297509 [debug] [Thread-2 (]: On model.dw_bootcamp.mart_carrier_performance: COMMIT
+[0m23:23:42.299271 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_airport_performance: COMMIT
+[0m23:23:42.300951 [debug] [Thread-4 (]: On model.dw_bootcamp.mart_delay_causes_share_month: COMMIT
+[0m23:23:42.301345 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.mart_carrier_performance"
+[0m23:23:42.301699 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_airport_performance"
+[0m23:23:42.302043 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_share_month"
+[0m23:23:42.302413 [debug] [Thread-2 (]: On model.dw_bootcamp.mart_carrier_performance: COMMIT
+[0m23:23:42.302768 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_airport_performance: COMMIT
+[0m23:23:42.303104 [debug] [Thread-4 (]: On model.dw_bootcamp.mart_delay_causes_share_month: COMMIT
+[0m23:23:42.333036 [debug] [Thread-2 (]: SQL status: COMMIT in 0.029 seconds
+[0m23:23:42.339923 [debug] [Thread-2 (]: Applying DROP to: "dbt_db"."public"."mart_carrier_performance__dbt_backup"
+[0m23:23:42.340347 [debug] [Thread-4 (]: SQL status: COMMIT in 0.037 seconds
+[0m23:23:42.340782 [debug] [Thread-1 (]: SQL status: COMMIT in 0.037 seconds
+[0m23:23:42.347067 [debug] [Thread-2 (]: Using postgres connection "model.dw_bootcamp.mart_carrier_performance"
+[0m23:23:42.349791 [debug] [Thread-4 (]: Applying DROP to: "dbt_db"."public"."mart_delay_causes_share_month__dbt_backup"
+[0m23:23:42.352025 [debug] [Thread-1 (]: Applying DROP to: "dbt_db"."public"."mart_airport_performance__dbt_backup"
+[0m23:23:42.352405 [debug] [Thread-2 (]: On model.dw_bootcamp.mart_carrier_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_carrier_performance"} */
+drop table if exists "dbt_db"."public"."mart_carrier_performance__dbt_backup" cascade
+[0m23:23:42.353085 [debug] [Thread-4 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_share_month"
+[0m23:23:42.353706 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_airport_performance"
+[0m23:23:42.354155 [debug] [Thread-4 (]: On model.dw_bootcamp.mart_delay_causes_share_month: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_delay_causes_share_month"} */
+drop table if exists "dbt_db"."public"."mart_delay_causes_share_month__dbt_backup" cascade
+[0m23:23:42.354514 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_airport_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_airport_performance"} */
+drop table if exists "dbt_db"."public"."mart_airport_performance__dbt_backup" cascade
+[0m23:23:42.355910 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m23:23:42.358762 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_airport_performance: Close
+[0m23:23:42.359638 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m23:23:42.360409 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.006 seconds
+[0m23:23:42.363544 [debug] [Thread-4 (]: On model.dw_bootcamp.mart_delay_causes_share_month: Close
+[0m23:23:42.364859 [debug] [Thread-2 (]: On model.dw_bootcamp.mart_carrier_performance: Close
+[0m23:23:42.366512 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACEF73290>]}
+[0m23:23:42.366959 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACEC27330>]}
+[0m23:23:42.367365 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACEC275F0>]}
+[0m23:23:42.368068 [info ] [Thread-1 (]: 1 of 5 OK created sql table model public.mart_airport_performance .............. [[32mSELECT 420[0m in 0.29s]
+[0m23:23:42.370147 [debug] [Thread-1 (]: Finished running node model.dw_bootcamp.mart_airport_performance
+[0m23:23:42.368705 [info ] [Thread-4 (]: 4 of 5 OK created sql table model public.mart_delay_causes_share_month ......... [[32mSELECT 228[0m in 0.29s]
+[0m23:23:42.370828 [debug] [Thread-1 (]: Began running node model.dw_bootcamp.mart_monthly_kpis
+[0m23:23:42.369437 [info ] [Thread-2 (]: 2 of 5 OK created sql table model public.mart_carrier_performance .............. [[32mSELECT 29[0m in 0.28s]
+[0m23:23:42.371642 [debug] [Thread-4 (]: Finished running node model.dw_bootcamp.mart_delay_causes_share_month
+[0m23:23:42.372881 [debug] [Thread-2 (]: Finished running node model.dw_bootcamp.mart_carrier_performance
+[0m23:23:42.372215 [info ] [Thread-1 (]: 5 of 5 START sql table model public.mart_monthly_kpis .......................... [RUN]
+[0m23:23:42.373723 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dw_bootcamp.mart_airport_performance, now model.dw_bootcamp.mart_monthly_kpis)
+[0m23:23:42.374271 [debug] [Thread-1 (]: Began compiling node model.dw_bootcamp.mart_monthly_kpis
+[0m23:23:42.379301 [debug] [Thread-1 (]: Writing injected SQL for node "model.dw_bootcamp.mart_monthly_kpis"
+[0m23:23:42.380745 [debug] [Thread-1 (]: Began executing node model.dw_bootcamp.mart_monthly_kpis
+[0m23:23:42.385080 [debug] [Thread-1 (]: Writing runtime sql for node "model.dw_bootcamp.mart_monthly_kpis"
+[0m23:23:42.386349 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_monthly_kpis"
+[0m23:23:42.386740 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_monthly_kpis: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_monthly_kpis"} */
+
+  
+    
+
+  create  table "dbt_db"."public"."mart_monthly_kpis__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with fct as (
+    select * from "dbt_db"."public"."int_fct_flight_delays"
+),
+
+dim_month as (
+    select * from "dbt_db"."public"."int_dim_month"
+)
+
+select
+    m.year,
+    m.month,
+    m.month_id,
+
+    sum(f.arr_flights)                                 as flights,
+    sum(f.arr_del15)                                   as delayed_15m,
+
+    case when sum(f.arr_flights) = 0 then 0
+         else 1.0 * sum(f.arr_del15) / sum(f.arr_flights)
+    end                                                as pct_delayed_15m,
+
+    sum(f.arr_cancelled)                               as cancelled,
+    sum(f.arr_diverted)                                as diverted,
+
+    sum(f.arr_delay)                                   as total_delay_minutes
+
+from fct f
+join dim_month m
+  on f.month_id = m.month_id
+group by 1,2,3
+  );
+  
+[0m23:23:42.387080 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:23:42.509725 [debug] [Thread-1 (]: SQL status: SELECT 228 in 0.122 seconds
+[0m23:23:42.514301 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_monthly_kpis"
+[0m23:23:42.514659 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_monthly_kpis: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_monthly_kpis"} */
+alter table "dbt_db"."public"."mart_monthly_kpis__dbt_tmp" rename to "mart_monthly_kpis"
+[0m23:23:42.515928 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:23:42.517518 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_monthly_kpis: COMMIT
+[0m23:23:42.517880 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_monthly_kpis"
+[0m23:23:42.518235 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_monthly_kpis: COMMIT
+[0m23:23:42.526531 [debug] [Thread-1 (]: SQL status: COMMIT in 0.008 seconds
+[0m23:23:42.532624 [debug] [Thread-1 (]: Applying DROP to: "dbt_db"."public"."mart_monthly_kpis__dbt_backup"
+[0m23:23:42.533242 [debug] [Thread-1 (]: Using postgres connection "model.dw_bootcamp.mart_monthly_kpis"
+[0m23:23:42.533558 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_monthly_kpis: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_monthly_kpis"} */
+drop table if exists "dbt_db"."public"."mart_monthly_kpis__dbt_backup" cascade
+[0m23:23:42.534624 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m23:23:42.536147 [debug] [Thread-1 (]: On model.dw_bootcamp.mart_monthly_kpis: Close
+[0m23:23:42.536859 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACEDC4950>]}
+[0m23:23:42.537595 [info ] [Thread-1 (]: 5 of 5 OK created sql table model public.mart_monthly_kpis ..................... [[32mSELECT 228[0m in 0.16s]
+[0m23:23:42.538383 [debug] [Thread-1 (]: Finished running node model.dw_bootcamp.mart_monthly_kpis
+[0m23:23:44.014921 [debug] [Thread-3 (]: SQL status: SELECT 1590085 in 1.859 seconds
+[0m23:23:44.018899 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_long"
+[0m23:23:44.019322 [debug] [Thread-3 (]: On model.dw_bootcamp.mart_delay_causes_long: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_delay_causes_long"} */
+alter table "dbt_db"."public"."mart_delay_causes_long__dbt_tmp" rename to "mart_delay_causes_long"
+[0m23:23:44.020487 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:23:44.021831 [debug] [Thread-3 (]: On model.dw_bootcamp.mart_delay_causes_long: COMMIT
+[0m23:23:44.022370 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_long"
+[0m23:23:44.022851 [debug] [Thread-3 (]: On model.dw_bootcamp.mart_delay_causes_long: COMMIT
+[0m23:23:44.106242 [debug] [Thread-3 (]: SQL status: COMMIT in 0.083 seconds
+[0m23:23:44.110534 [debug] [Thread-3 (]: Applying DROP to: "dbt_db"."public"."mart_delay_causes_long__dbt_backup"
+[0m23:23:44.111669 [debug] [Thread-3 (]: Using postgres connection "model.dw_bootcamp.mart_delay_causes_long"
+[0m23:23:44.112114 [debug] [Thread-3 (]: On model.dw_bootcamp.mart_delay_causes_long: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "node_id": "model.dw_bootcamp.mart_delay_causes_long"} */
+drop table if exists "dbt_db"."public"."mart_delay_causes_long__dbt_backup" cascade
+[0m23:23:44.113202 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m23:23:44.114803 [debug] [Thread-3 (]: On model.dw_bootcamp.mart_delay_causes_long: Close
+[0m23:23:44.115712 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8333554a-d9e9-44b2-9f3f-6c7fc3a553e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACF03FE00>]}
+[0m23:23:44.116479 [info ] [Thread-3 (]: 3 of 5 OK created sql table model public.mart_delay_causes_long ................ [[32mSELECT 1590085[0m in 2.04s]
+[0m23:23:44.117311 [debug] [Thread-3 (]: Finished running node model.dw_bootcamp.mart_delay_causes_long
+[0m23:23:44.118661 [debug] [MainThread]: On master: COMMIT
+[0m23:23:44.118979 [debug] [MainThread]: Using postgres connection "master"
+[0m23:23:44.119271 [debug] [MainThread]: On master: COMMIT
+[0m23:23:44.119542 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:23:44.147872 [debug] [MainThread]: SQL status: COMMIT in 0.028 seconds
+[0m23:23:44.148387 [debug] [MainThread]: On master: Close
+[0m23:23:44.148970 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:23:44.149400 [debug] [MainThread]: Connection 'list_dbt_db' was properly closed.
+[0m23:23:44.149754 [debug] [MainThread]: Connection 'list_dbt_db_public' was properly closed.
+[0m23:23:44.150077 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_delay_causes_long' was properly closed.
+[0m23:23:44.150366 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_delay_causes_share_month' was properly closed.
+[0m23:23:44.150643 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_monthly_kpis' was properly closed.
+[0m23:23:44.150871 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_carrier_performance' was properly closed.
+[0m23:23:44.151341 [info ] [MainThread]: 
+[0m23:23:44.151812 [info ] [MainThread]: Finished running 5 table models in 0 hours 0 minutes and 2.31 seconds (2.31s).
+[0m23:23:44.153385 [debug] [MainThread]: Command end result
+[0m23:23:44.221787 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m23:23:44.225927 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m23:23:44.233951 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\run_results.json
+[0m23:23:44.234357 [info ] [MainThread]: 
+[0m23:23:44.234844 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:23:44.235255 [info ] [MainThread]: 
+[0m23:23:44.235714 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m23:23:44.236900 [debug] [MainThread]: Command `dbt run` succeeded at 23:23:44.236779 after 3.81 seconds
+[0m23:23:44.237315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACA02E750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACA2A0BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013ACEF6B9B0>]}
+[0m23:23:44.237691 [debug] [MainThread]: Flushing usage events
+[0m23:23:45.217943 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:43:29.857474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA428463C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA3F516FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA43C4FED0>]}
+
+
+============================== 22:43:29.870294 | eb2a2c95-bff6-4777-ba98-cb0fa165f5ac ==============================
+[0m22:43:29.870294 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:43:29.871103 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'invocation_command': 'dbt docs generate', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m22:43:30.559770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eb2a2c95-bff6-4777-ba98-cb0fa165f5ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA42F39940>]}
+[0m22:43:30.652168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eb2a2c95-bff6-4777-ba98-cb0fa165f5ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA43C36580>]}
+[0m22:43:30.655127 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m22:43:31.327358 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m22:43:34.481699 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:43:34.482175 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:43:34.482445 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:43:34.520102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eb2a2c95-bff6-4777-ba98-cb0fa165f5ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA450A5350>]}
+[0m22:43:34.661515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eb2a2c95-bff6-4777-ba98-cb0fa165f5ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA43C2F980>]}
+[0m22:43:34.662094 [info ] [MainThread]: Found 1 seed, 10 models, 899 macros
+[0m22:43:34.662557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb2a2c95-bff6-4777-ba98-cb0fa165f5ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA4560EDD0>]}
+[0m22:43:34.664573 [info ] [MainThread]: 
+[0m22:43:34.664971 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:43:34.665329 [info ] [MainThread]: 
+[0m22:43:34.665925 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:43:34.670452 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db_public'
+[0m22:43:39.395118 [debug] [ThreadPool]: Using postgres connection "list_dbt_db_public"
+[0m22:43:39.395578 [debug] [ThreadPool]: On list_dbt_db_public: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db_public"} */
+select
+      'dbt_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m22:43:39.395912 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:43:43.484220 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+[0m22:43:47.561023 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db_public"} */
+select
+      'dbt_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m22:43:47.561560 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m22:43:47.561956 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_relations_without_caching
+[0m22:43:47.562237 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m22:43:47.562553 [debug] [ThreadPool]: On list_dbt_db_public: No close available on handle
+[0m22:43:47.565464 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:43:47.565753 [debug] [MainThread]: Connection 'list_dbt_db_public' was properly closed.
+[0m22:43:47.566228 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  
+[0m22:43:47.568533 [debug] [MainThread]: Command `dbt docs generate` failed at 22:43:47.567502 after 17.94 seconds
+[0m22:43:47.569103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA4561FD40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA43A8F110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA453219D0>]}
+[0m22:43:47.569486 [debug] [MainThread]: Flushing usage events
+[0m22:43:48.847937 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:44:04.154769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2645A63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2612C6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2659BFED0>]}
+
+
+============================== 22:44:04.159525 | 2e038c4d-771e-498c-9b8f-27c9ad1c9345 ==============================
+[0m22:44:04.159525 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:44:04.160221 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt docs generate', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m22:44:04.362572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2e038c4d-771e-498c-9b8f-27c9ad1c9345', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A264CA5940>]}
+[0m22:44:04.431429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2e038c4d-771e-498c-9b8f-27c9ad1c9345', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2659A2580>]}
+[0m22:44:04.433115 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m22:44:04.850673 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m22:44:05.048102 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:44:05.048554 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:44:05.048799 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:44:05.086759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2e038c4d-771e-498c-9b8f-27c9ad1c9345', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A266DE5350>]}
+[0m22:44:05.100584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2e038c4d-771e-498c-9b8f-27c9ad1c9345', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A26599F980>]}
+[0m22:44:05.101138 [info ] [MainThread]: Found 1 seed, 10 models, 899 macros
+[0m22:44:05.101557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2e038c4d-771e-498c-9b8f-27c9ad1c9345', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A26734ECF0>]}
+[0m22:44:05.103455 [info ] [MainThread]: 
+[0m22:44:05.103912 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:44:05.104305 [info ] [MainThread]: 
+[0m22:44:05.104831 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:44:05.109148 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_db_public'
+[0m22:44:05.291976 [debug] [ThreadPool]: Using postgres connection "list_dbt_db_public"
+[0m22:44:05.292416 [debug] [ThreadPool]: On list_dbt_db_public: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "list_dbt_db_public"} */
+select
+      'dbt_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m22:44:05.292705 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:44:05.410885 [debug] [ThreadPool]: SQL status: SELECT 11 in 0.118 seconds
+[0m22:44:05.412513 [debug] [ThreadPool]: On list_dbt_db_public: ROLLBACK
+[0m22:44:05.413333 [debug] [ThreadPool]: On list_dbt_db_public: Close
+[0m22:44:05.419814 [debug] [MainThread]: Using postgres connection "master"
+[0m22:44:05.420171 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m22:44:05.420492 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:44:05.458331 [debug] [MainThread]: SQL status: SELECT 1 in 0.038 seconds
+[0m22:44:05.459799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2e038c4d-771e-498c-9b8f-27c9ad1c9345', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A267367930>]}
+[0m22:44:05.460355 [debug] [MainThread]: On master: ROLLBACK
+[0m22:44:05.461085 [debug] [MainThread]: On master: Close
+[0m22:44:05.470959 [debug] [Thread-1 (]: Began running node seed.dw_bootcamp.Airline_Delay_Cause
+[0m22:44:05.471483 [debug] [Thread-1 (]: Acquiring new postgres connection 'seed.dw_bootcamp.Airline_Delay_Cause'
+[0m22:44:05.471814 [debug] [Thread-1 (]: Began compiling node seed.dw_bootcamp.Airline_Delay_Cause
+[0m22:44:05.478754 [debug] [Thread-1 (]: Began executing node seed.dw_bootcamp.Airline_Delay_Cause
+[0m22:44:05.479396 [debug] [Thread-1 (]: Finished running node seed.dw_bootcamp.Airline_Delay_Cause
+[0m22:44:05.480007 [debug] [Thread-2 (]: Began running node model.dw_bootcamp.stg_airline_delay_cause
+[0m22:44:05.480554 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dw_bootcamp.stg_airline_delay_cause'
+[0m22:44:05.480881 [debug] [Thread-2 (]: Began compiling node model.dw_bootcamp.stg_airline_delay_cause
+[0m22:44:05.483724 [debug] [Thread-2 (]: Writing injected SQL for node "model.dw_bootcamp.stg_airline_delay_cause"
+[0m22:44:05.485186 [debug] [Thread-2 (]: Began executing node model.dw_bootcamp.stg_airline_delay_cause
+[0m22:44:05.485956 [debug] [Thread-2 (]: Finished running node model.dw_bootcamp.stg_airline_delay_cause
+[0m22:44:05.486597 [debug] [Thread-1 (]: Began running node model.dw_bootcamp.int_dim_month
+[0m22:44:05.486938 [debug] [Thread-4 (]: Began running node model.dw_bootcamp.int_dim_carrier
+[0m22:44:05.487292 [debug] [Thread-2 (]: Began running node model.dw_bootcamp.int_fct_flight_delays
+[0m22:44:05.487622 [debug] [Thread-3 (]: Began running node model.dw_bootcamp.int_dim_airport
+[0m22:44:05.487976 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.dw_bootcamp.Airline_Delay_Cause, now model.dw_bootcamp.int_dim_month)
+[0m22:44:05.488451 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.dw_bootcamp.int_dim_carrier'
+[0m22:44:05.488805 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dw_bootcamp.stg_airline_delay_cause, now model.dw_bootcamp.int_fct_flight_delays)
+[0m22:44:05.489261 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.dw_bootcamp.int_dim_airport'
+[0m22:44:05.489588 [debug] [Thread-1 (]: Began compiling node model.dw_bootcamp.int_dim_month
+[0m22:44:05.489956 [debug] [Thread-4 (]: Began compiling node model.dw_bootcamp.int_dim_carrier
+[0m22:44:05.490282 [debug] [Thread-2 (]: Began compiling node model.dw_bootcamp.int_fct_flight_delays
+[0m22:44:05.490609 [debug] [Thread-3 (]: Began compiling node model.dw_bootcamp.int_dim_airport
+[0m22:44:05.492980 [debug] [Thread-1 (]: Writing injected SQL for node "model.dw_bootcamp.int_dim_month"
+[0m22:44:05.495435 [debug] [Thread-4 (]: Writing injected SQL for node "model.dw_bootcamp.int_dim_carrier"
+[0m22:44:05.497681 [debug] [Thread-2 (]: Writing injected SQL for node "model.dw_bootcamp.int_fct_flight_delays"
+[0m22:44:05.500083 [debug] [Thread-3 (]: Writing injected SQL for node "model.dw_bootcamp.int_dim_airport"
+[0m22:44:05.501985 [debug] [Thread-1 (]: Began executing node model.dw_bootcamp.int_dim_month
+[0m22:44:05.502357 [debug] [Thread-4 (]: Began executing node model.dw_bootcamp.int_dim_carrier
+[0m22:44:05.503055 [debug] [Thread-1 (]: Finished running node model.dw_bootcamp.int_dim_month
+[0m22:44:05.503688 [debug] [Thread-4 (]: Finished running node model.dw_bootcamp.int_dim_carrier
+[0m22:44:05.504016 [debug] [Thread-3 (]: Began executing node model.dw_bootcamp.int_dim_airport
+[0m22:44:05.504442 [debug] [Thread-2 (]: Began executing node model.dw_bootcamp.int_fct_flight_delays
+[0m22:44:05.505089 [debug] [Thread-3 (]: Finished running node model.dw_bootcamp.int_dim_airport
+[0m22:44:05.505717 [debug] [Thread-2 (]: Finished running node model.dw_bootcamp.int_fct_flight_delays
+[0m22:44:05.506390 [debug] [Thread-3 (]: Began running node model.dw_bootcamp.mart_delay_causes_long
+[0m22:44:05.506734 [debug] [Thread-4 (]: Began running node model.dw_bootcamp.mart_carrier_performance
+[0m22:44:05.507048 [debug] [Thread-2 (]: Began running node model.dw_bootcamp.mart_delay_causes_share_month
+[0m22:44:05.507365 [debug] [Thread-1 (]: Began running node model.dw_bootcamp.mart_airport_performance
+[0m22:44:05.507694 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dw_bootcamp.int_dim_airport, now model.dw_bootcamp.mart_delay_causes_long)
+[0m22:44:05.508104 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dw_bootcamp.int_dim_carrier, now model.dw_bootcamp.mart_carrier_performance)
+[0m22:44:05.508442 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dw_bootcamp.int_fct_flight_delays, now model.dw_bootcamp.mart_delay_causes_share_month)
+[0m22:44:05.508776 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dw_bootcamp.int_dim_month, now model.dw_bootcamp.mart_airport_performance)
+[0m22:44:05.509110 [debug] [Thread-3 (]: Began compiling node model.dw_bootcamp.mart_delay_causes_long
+[0m22:44:05.509433 [debug] [Thread-4 (]: Began compiling node model.dw_bootcamp.mart_carrier_performance
+[0m22:44:05.509750 [debug] [Thread-2 (]: Began compiling node model.dw_bootcamp.mart_delay_causes_share_month
+[0m22:44:05.510062 [debug] [Thread-1 (]: Began compiling node model.dw_bootcamp.mart_airport_performance
+[0m22:44:05.512822 [debug] [Thread-3 (]: Writing injected SQL for node "model.dw_bootcamp.mart_delay_causes_long"
+[0m22:44:05.515491 [debug] [Thread-4 (]: Writing injected SQL for node "model.dw_bootcamp.mart_carrier_performance"
+[0m22:44:05.518061 [debug] [Thread-2 (]: Writing injected SQL for node "model.dw_bootcamp.mart_delay_causes_share_month"
+[0m22:44:05.520613 [debug] [Thread-1 (]: Writing injected SQL for node "model.dw_bootcamp.mart_airport_performance"
+[0m22:44:05.522502 [debug] [Thread-4 (]: Began executing node model.dw_bootcamp.mart_carrier_performance
+[0m22:44:05.522834 [debug] [Thread-3 (]: Began executing node model.dw_bootcamp.mart_delay_causes_long
+[0m22:44:05.523454 [debug] [Thread-4 (]: Finished running node model.dw_bootcamp.mart_carrier_performance
+[0m22:44:05.524078 [debug] [Thread-3 (]: Finished running node model.dw_bootcamp.mart_delay_causes_long
+[0m22:44:05.524401 [debug] [Thread-2 (]: Began executing node model.dw_bootcamp.mart_delay_causes_share_month
+[0m22:44:05.524741 [debug] [Thread-4 (]: Began running node model.dw_bootcamp.mart_monthly_kpis
+[0m22:44:05.525062 [debug] [Thread-1 (]: Began executing node model.dw_bootcamp.mart_airport_performance
+[0m22:44:05.525731 [debug] [Thread-2 (]: Finished running node model.dw_bootcamp.mart_delay_causes_share_month
+[0m22:44:05.526070 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dw_bootcamp.mart_carrier_performance, now model.dw_bootcamp.mart_monthly_kpis)
+[0m22:44:05.526633 [debug] [Thread-1 (]: Finished running node model.dw_bootcamp.mart_airport_performance
+[0m22:44:05.527070 [debug] [Thread-4 (]: Began compiling node model.dw_bootcamp.mart_monthly_kpis
+[0m22:44:05.529809 [debug] [Thread-4 (]: Writing injected SQL for node "model.dw_bootcamp.mart_monthly_kpis"
+[0m22:44:05.530708 [debug] [Thread-4 (]: Began executing node model.dw_bootcamp.mart_monthly_kpis
+[0m22:44:05.531418 [debug] [Thread-4 (]: Finished running node model.dw_bootcamp.mart_monthly_kpis
+[0m22:44:05.532398 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:44:05.532686 [debug] [MainThread]: Connection 'list_dbt_db_public' was properly closed.
+[0m22:44:05.532985 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_airport_performance' was properly closed.
+[0m22:44:05.533287 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_delay_causes_share_month' was properly closed.
+[0m22:44:05.533551 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_monthly_kpis' was properly closed.
+[0m22:44:05.533835 [debug] [MainThread]: Connection 'model.dw_bootcamp.mart_delay_causes_long' was properly closed.
+[0m22:44:05.535801 [debug] [MainThread]: Command end result
+[0m22:44:05.632594 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m22:44:05.650435 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m22:44:05.657585 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\run_results.json
+[0m22:44:05.828600 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m22:44:05.828980 [info ] [MainThread]: Building catalog
+[0m22:44:05.839040 [debug] [ThreadPool]: Acquiring new postgres connection 'dbt_db.information_schema'
+[0m22:44:05.846029 [debug] [ThreadPool]: Using postgres connection "dbt_db.information_schema"
+[0m22:44:05.846475 [debug] [ThreadPool]: On dbt_db.information_schema: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dw_bootcamp", "target_name": "dev", "connection_name": "dbt_db.information_schema"} */
+
+    
+    
+
+    select
+        'dbt_db' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('mart_airport_performance')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('mart_delay_causes_long')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('mart_delay_causes_share_month')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('mart_monthly_kpis')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('stg_airline_delay_cause')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('int_dim_carrier')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('mart_carrier_performance')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('int_dim_airport')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('int_fct_flight_delays')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('int_dim_month')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('Airline_Delay_Cause')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m22:44:05.846849 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:44:05.870539 [debug] [ThreadPool]: SQL status: SELECT 103 in 0.024 seconds
+[0m22:44:05.875475 [debug] [ThreadPool]: On dbt_db.information_schema: ROLLBACK
+[0m22:44:05.876383 [debug] [ThreadPool]: On dbt_db.information_schema: Close
+[0m22:44:05.891081 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\catalog.json
+[0m22:44:05.939440 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\manifest.json
+[0m22:44:05.942524 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\semantic_manifest.json
+[0m22:44:05.942929 [info ] [MainThread]: Catalog written to C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dw_bootcamp\target\catalog.json
+[0m22:44:05.944240 [debug] [MainThread]: Command `dbt docs generate` succeeded at 22:44:05.944127 after 1.90 seconds
+[0m22:44:05.944540 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m22:44:05.944781 [debug] [MainThread]: Connection 'dbt_db.information_schema' was properly closed.
+[0m22:44:05.945121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2657FB110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A267352410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A267002E60>]}
+[0m22:44:05.945473 [debug] [MainThread]: Flushing usage events
+[0m22:44:06.742969 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:44:20.787690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA070C63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA03E46FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA084B3ED0>]}
+
+
+============================== 22:44:20.792419 | c808b967-8f30-4f97-8462-ed1c8083fc68 ==============================
+[0m22:44:20.792419 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:44:20.793054 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs serve --port 8085', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\migue\\OneDrive\\Documentos\\DataEnginneringProject\\2_data_warehouse\\dw_bootcamp\\logs'}
+[0m22:44:21.002103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c808b967-8f30-4f97-8462-ed1c8083fc68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA077BD810>]}
+[0m22:44:21.070070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c808b967-8f30-4f97-8462-ed1c8083fc68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA084F8E20>]}
+[0m22:44:53.823957 [error] [MainThread]: Encountered an error:
+
+[0m22:44:53.833086 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Lib\site-packages\dbt\cli\main.py", line 309, in docs_serve
+    results = task.run()
+  File "C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\1_local_setup\.venv\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\migue\anaconda3\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "C:\Users\migue\anaconda3\Lib\selectors.py", line 314, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\migue\anaconda3\Lib\selectors.py", line 305, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m22:44:53.834413 [debug] [MainThread]: Command `dbt docs serve` failed at 22:44:53.834257 after 33.16 seconds
+[0m22:44:53.834791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA097EDC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA097EDD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA0982C7D0>]}
+[0m22:44:53.835176 [debug] [MainThread]: Flushing usage events
+[0m22:44:54.849463 [debug] [MainThread]: An error was encountered while trying to flush usage events

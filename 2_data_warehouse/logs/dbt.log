@@ -1,0 +1,27 @@
+[0m23:03:22.273222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002304A6523C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023047326FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002304CA07C50>]}
+
+
+============================== 23:03:22.399958 | f043b4b1-23c0-4ab7-a8a6-45b83c53749e ==============================
+[0m23:03:22.399958 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:03:22.400594 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\migue\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:03:22.739404 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\migue\.dbt
+[0m23:03:33.586675 [info ] [MainThread]: A project called dw_bootcamp already exists here.
+[0m23:03:33.589767 [debug] [MainThread]: Command `dbt init` succeeded at 23:03:33.587622 after 11.48 seconds
+[0m23:03:33.590190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002304CB289D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002304CB0F410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002304CA488D0>]}
+[0m23:03:33.590584 [debug] [MainThread]: Flushing usage events
+[0m23:03:34.501152 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:22:20.079345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BD01E23C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BCCEB6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BD25E7C50>]}
+
+
+============================== 23:22:20.088343 | 71dfea07-7280-4d4b-86fb-8f5e280f565e ==============================
+[0m23:22:20.088343 [info ] [MainThread]: Running with dbt=1.11.11
+[0m23:22:20.089086 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\migue\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --select intermediate', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:22:20.089539 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\migue\OneDrive\Documentos\DataEnginneringProject\2_data_warehouse\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:22:20.090576 [debug] [MainThread]: Command `dbt run` failed at 23:22:20.090437 after 0.19 seconds
+[0m23:22:20.090963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BD15CB490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BD15F68D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BD15D27A0>]}
+[0m23:22:20.091324 [debug] [MainThread]: Flushing usage events
+[0m23:22:20.966652 [debug] [MainThread]: An error was encountered while trying to flush usage events
