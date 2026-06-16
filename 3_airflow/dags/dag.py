@@ -59,7 +59,7 @@ my_cosmos_dag = DbtDag(
     execution_config=ExecutionConfig(
         # Caminho do executável dbt dentro do virtualenv criado no Dockerfile
         dbt_executable_path=f"{os.environ['AIRFLOW_HOME']}/dbt_venv/bin/dbt",
-    ),
+    ), #Miguel
 
     operator_args={
         "install_deps": True,  # Roda "dbt deps" antes de executar (baixa os pacotes)
